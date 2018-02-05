@@ -1,8 +1,30 @@
-Application-template
+Шаблон проекта
 ===
 
-## Руководство
+## Руководство 
 
 * [Установка](install.md)
-* [Конфигурация](config.md)
-* [Руководство](guide.md)
+
+## Основное
+
+* [Введение](template-intro.md)
+* [Установка](template-install.md)
+* [Особенности шаблона](template-feature.md)
+* [Концепции разработки](template-development.md)
+
+## Конфигурации
+
+* [Особенности](config-feature.md)
+* [Меню](config-menu.md)
+* [Структура](config-map.md)
+* [Фильтры](config-filter.md)
+
+## Отладка
+
+* [Ресурсы браузера (assets)](debug-assets.md)
+
+## Создание приложения
+
+* [Введение](custom-intro.md)
+* [Зависимости](.md)
+* [Конфигурация](.md)
