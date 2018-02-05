@@ -4,6 +4,7 @@
 ## Руководство 
 
 * [Установка](install.md)
+* [CHANGELOG](platform-release.md) 
 
 ## Основное
 
