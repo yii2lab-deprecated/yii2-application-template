@@ -51,15 +51,11 @@
 		"yii2module/yii2-dashboard": "0.0.*",
 		"yii2module/yii2-encrypt": "0.2.*",
 		"yii2module/yii2-tool": "0.0.*",
-		"yii2woop/yii2-tps-generated": "1.2.*",
-		"yii2woop/yii2-common": "1.0.*",
 		"yii2woop/yii2-account": "1.10.*",
 		"yii2woop/yii2-profile": "0.5.*",
-		"yii2woop/yii2-service": "0.7.*",
 		"php": ">=5.6.0"
 	},
 	"require-dev": {
-		"yii2lab/yii2-test": "1.6.*",
 		"yii2module/yii2-test": "dev-master",
 		"yii2module/yii2-rest-client": "1.4.*",
 		"yii2module/yii2-guide": "1.11.*",
