@@ -10,6 +10,7 @@
 
 * [Введение](template-intro.md)
 * [Установка](template-install.md)
+* [Платформа](template-platform.md)
 * [Особенности шаблона](template-feature.md)
 * [Концепции разработки](template-development.md)
 
