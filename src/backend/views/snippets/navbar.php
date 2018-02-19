@@ -43,7 +43,7 @@ $from = '@yii2lab/applicationTemplate/backend';
 			
 			<!-- Control Sidebar Toggle Button -->
 			<li>
-				<?= Html::a('<i class="fa fa-external-link"></i>', param('url.frontend'), ['target' => '_blank', 'title' => Yii::t('main', 'go_to_frontend')]); ?>
+				<?= Html::a('<i class="fa fa-external-link"></i>', env('url.frontend'), ['target' => '_blank', 'title' => Yii::t('main', 'go_to_frontend')]); ?>
 			</li>
 		</ul>
 	</div>
