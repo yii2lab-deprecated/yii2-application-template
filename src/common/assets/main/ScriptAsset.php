@@ -22,11 +22,8 @@ class ScriptAsset extends AssetBundle
 	}
 	
 	private function generateConfigToJs() {
-		$env = env(null);
-		$config['env'] = [
-			'mode' => $env['mode'],
-			'url' => $env['url'],
-		];
+        $config['env']['mode'] = env('mode');
+        $config['env']['url'] = env('url');
         Yii::$app->view->registerJsVar('app', $config);
 	}
 }
