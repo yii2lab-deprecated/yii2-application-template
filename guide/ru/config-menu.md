@@ -1,6 +1,8 @@
 Меню
 ===
 
+## Введение
+
 Файлы с данными для формирования разных меню для админки и сайта находятся в `common/data/menu`.
 
 NavBar настраивается в файлах:
@@ -27,6 +29,8 @@ return [
 ];
 ```
 
+## Атрибуты
+
 * `label` - надпись пункта (строка или массив)
 * `url` - ссылка
 * `icon` - иконка (fa)
@@ -38,6 +42,8 @@ return [
 * `visible` - наоборот, показать пункт
 * `js` - JS-код выполняемый при клике
 * `active` - активный ли пункт
+
+## Вложенные меню
 
 Пример пункта с дочерними пунктами:
 
@@ -66,17 +72,70 @@ return [
 ];
 ```
 
+## Классы
+
 Можно формировать меню из класса:
 
 ```php
 return [
 	'rightMenu' => [
 		[
-			'module' => 'user',
 			'class' => 'yii2woop\account\module\helpers\Navigation',
 		],
 	],
 ];
 ```
 
+или
+
+```php
+return [
+	'rightMenu' => [
+		'yii2woop\account\module\helpers\Navigation',
+	],
+];
+```
+
 Класс генерирует массив для формирования пункта.
+
+## Разделитель
+
+Для вставки разделителя, добавляем `MenuHelper::DIVIDER`:
+
+```php
+return [
+	'rightMenu' => [
+		[
+			'label' => ['notify/main', 'title'],
+			'icon' => 'bell',
+			'items' => [
+				[
+					'label' => ['notify/main', 'sms'],
+					'url' => 'notify/send/sms',
+				],
+				MenuHelper::DIVIDER,
+				[
+					'label' => ['notify/main', 'email'],
+					'url' => 'notify/send/email',
+				],
+				[
+					'label' => ['notify/cron', 'title'],
+					'url' => 'notify/cron',
+				],
+			],
+		],
+	],
+];
+```
+
+## Заголовок
+
+Если указана только надпсь, то пункт станет заголовком:
+
+```php
+return [
+		[
+			'label' => ['admin', 'system'],
+		],
+];
+```
