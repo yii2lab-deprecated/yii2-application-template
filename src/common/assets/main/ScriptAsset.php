@@ -4,7 +4,6 @@ namespace yii2lab\applicationTemplate\common\assets\main;
 
 use Yii;
 use yii\web\AssetBundle;
-use yii\web\View;
 
 class ScriptAsset extends AssetBundle
 {
@@ -19,8 +18,7 @@ class ScriptAsset extends AssetBundle
 	
 	function init() {
 		parent::init();
-		$jsCode = $this->generateConfigToJs();
-		Yii::$app->view->registerJs($jsCode, View::POS_HEAD);
+		$this->generateConfigToJs();
 	}
 	
 	private function generateConfigToJs() {
@@ -29,7 +27,6 @@ class ScriptAsset extends AssetBundle
 			'mode' => $env['mode'],
 			'url' => $env['url'],
 		];
-		$code = 'app = ' . json_encode($config) . ';';
-		return $code;
+        Yii::$app->view->registerJsVar('app', $config);
 	}
 }
