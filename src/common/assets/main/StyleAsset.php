@@ -2,7 +2,6 @@
 
 namespace yii2lab\applicationTemplate\common\assets\main;
 
-use Yii;
 use yii\web\AssetBundle;
 
 class StyleAsset extends AssetBundle

@@ -2,44 +2,62 @@
 
 use yii2lab\helpers\MenuHelper;
 use yii2lab\helpers\ModuleHelper;
+use yii2lab\misc\enums\HtmlEnum;
 use yii2module\article\widgets\PostList;
 use yii2module\lang\widgets\LangSelector;
 
-$menu = include(COMMON_DATA_DIR . DS . 'menu' . DS . 'footer.php');
-$items = MenuHelper::gen($menu['leftMenu']);
+$items = MenuHelper::load('menu/footer', 'leftMenu', true);
+
+$lineCount = 1;
+$height = 40 * $lineCount;
+
+$css = '
+.wrap {
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto -'.$height.'px;
+	padding: 0 0 '.$height.'px;
+}
+
+.footer {
+	height: '.$height.'px;
+	background-color: #f5f5f5;
+	border-top: 1px solid #ddd;
+}
+
+.footer .container {
+	padding-top: 8px;
+}
+';
+
+$this->registerCss($css);
 
 ?>
 
 <div class="pull-left">
-	<p>
-	    &copy; <?= Yii::$app->name . SPC . date('Y') ?>
-        <?= MenuHelper::renderMenu($items) ?>
-	</p>
 
-	<?php if(APP == FRONTEND) { ?>
+    &copy; <?= Yii::$app->name . SPC . date('Y') ?>
 
-		<?php if(ModuleHelper::has('article')) { ?>
-			<p>
-		        <?= PostList::widget([
-		                'names' => param('article.links'),
-                ]) ?>
-			</p>
-		<?php } ?>
+    &nbsp;
 
-	<?php } ?>
+    <?php if(APP == FRONTEND && ModuleHelper::has('article')) { ?>
+
+        <?= PostList::widget([
+            'names' => param('article.links'),
+        ]) ?>
+
+    <?php } ?>
 
 </div>
 
 <div class="pull-right">
 
 	<?php if(ModuleHelper::has('lang')) { ?>
-		<i class="fa fa-language" title="<?= Yii::t('lang/main', 'title') ?>"></i>
         <span class="dropup">
             <?= LangSelector::widget() ?>
+            <?= HtmlEnum::PIPE ?>
+            <?= MenuHelper::renderMenu($items) ?>
         </span>
 	<?php } ?>
 
-	&nbsp;
-
-	<?= Yii::powered() ?>
 </div>
