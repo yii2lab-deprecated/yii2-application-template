@@ -1,7 +1,7 @@
 <?php
 
 use yii2lab\widgets\Menu;
-use yii2lab\helpers\MenuHelper;
+use yii2lab\extension\menu\helpers\MenuHelper;
 
 $menu = MenuHelper::load('menu/navbar_backend', 'mainMenu');
 

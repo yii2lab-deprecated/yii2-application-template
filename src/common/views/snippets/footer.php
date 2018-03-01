@@ -1,6 +1,6 @@
 <?php
 
-use yii2lab\helpers\MenuHelper;
+use yii2lab\extension\menu\helpers\MenuHelper;
 use yii2lab\helpers\ModuleHelper;
 use yii2lab\misc\enums\HtmlEnum;
 use yii2module\article\widgets\PostList;
