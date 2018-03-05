@@ -19,13 +19,13 @@ $css = '
 	padding: 0 0 '.$height.'px;
 }
 
-.footer {
+.page-footer {
 	height: '.$height.'px;
 	background-color: #f5f5f5;
 	border-top: 1px solid #ddd;
 }
 
-.footer .container {
+.page-footer .container {
 	padding-top: 8px;
 }
 ';
