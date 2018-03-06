@@ -41,11 +41,11 @@ $identity = Yii::$app->user->identity;
 
 		<div class="pull-left">
 			<?php if(ModuleHelper::has('profile', FRONTEND)) {
-				echo Html::a(t('profile/profile', 'title'),env('url.frontend') . 'profile/person',['class'=>"btn btn-default btn-flat"]);
+				echo Html::a(Yii::t('profile/profile', 'title'),env('url.frontend') . 'profile/person',['class'=>"btn btn-default btn-flat"]);
 			} ?>
 		</div>
 		<div class="pull-right">
-			<?= Html::a(t('account/auth', 'logout_action'),['/user/auth/logout'],['class'=>"btn btn-default btn-flat", 'data-method'=>'post']); ?>
+			<?= Html::a(Yii::t('account/auth', 'logout_action'),['/user/auth/logout'],['class'=>"btn btn-default btn-flat", 'data-method'=>'post']); ?>
 		</div>
 	</li>
 </ul>
