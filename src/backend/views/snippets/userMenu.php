@@ -1,9 +1,12 @@
 <?php
 
 use yii\helpers\Html;
+use yii2lab\domain\helpers\ServiceHelper;
 use yii2lab\helpers\ModuleHelper;
+use yii2module\profile\widget\Avatar;
 
 /* @var $this yii\web\View */
+/* @var $identity \yii2module\account\domain\v2\entities\LoginEntity */
 
 $identity = Yii::$app->user->identity;
 
@@ -12,27 +15,33 @@ $identity = Yii::$app->user->identity;
 <!-- Menu Toggle Button -->
 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-    <?php if(!empty($identity->profile)) { ?>
+    <?php if(ServiceHelper::has('profile.avatar')) { ?>
         <!-- The user image in the navbar-->
-        <img src="<?= $identity->profile->avatar_url ?>" class="user-image" alt="User Image" />
+	    <?= Avatar::widget([
+		    'options' => [
+			    'class' => 'img-circle',
+                'height' => 18,
+		    ],
+	    ]) ?>
     <?php } ?>
     
 	<!-- hidden-xs hides the username on small devices so only the image appears. -->
-	<small class="hidden-xs"><?= $identity->username ?></small>
+    <!-- <small class="hidden-xs"><?= $identity->username ?></small> -->
 </a>
 
 <ul class="dropdown-menu">
 
 	<!-- The user image in the menu -->
 	<li class="user-header">
-        <?php if(!empty($identity->profile)) { ?>
-            <img src="<?= $identity->profile->avatar_url ?>" class="img-circle" alt="User Image" />
+        <?php if(ServiceHelper::has('profile.avatar')) { ?>
+	        <?= Avatar::widget([
+		        'options' => [
+			        'class' => 'img-circle',
+		        ],
+	        ]) ?>
         <?php } ?>
 		<p>
 			<?= $identity->username ?>
-		</p>
-		<p>
-			Web Developer
 		</p>
 	</li>
 	
@@ -40,7 +49,7 @@ $identity = Yii::$app->user->identity;
 	<li class="user-footer">
 
 		<div class="pull-left">
-			<?php if(ModuleHelper::has('profile', FRONTEND)) {
+			<?php if(ModuleHelper::has('profile', FRONTEND) && ServiceHelper::has('profile.avatar')) {
 				echo Html::a(Yii::t('profile/profile', 'title'),env('url.frontend') . 'profile/person',['class'=>"btn btn-default btn-flat"]);
 			} ?>
 		</div>
