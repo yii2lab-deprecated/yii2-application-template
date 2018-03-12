@@ -23,6 +23,8 @@ $identity = Yii::$app->user->identity;
                 'height' => 18,
 		    ],
 	    ]) ?>
+	<?php } else { ?>
+	    <?= $identity->username ?>
     <?php } ?>
     
 	<!-- hidden-xs hides the username on small devices so only the image appears. -->
