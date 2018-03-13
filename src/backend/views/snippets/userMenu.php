@@ -1,8 +1,8 @@
 <?php
 
-use yii\helpers\Html;
 use yii2lab\domain\helpers\ServiceHelper;
 use yii2lab\helpers\ModuleHelper;
+use yii2lab\helpers\yii\Html;
 use yii2module\profile\widget\Avatar;
 
 /* @var $this yii\web\View */
@@ -24,7 +24,7 @@ $identity = Yii::$app->user->identity;
 		    ],
 	    ]) ?>
 	<?php } else { ?>
-	    <?= $identity->username ?>
+	    <?= Html::fa('user') ?>
     <?php } ?>
     
 	<!-- hidden-xs hides the username on small devices so only the image appears. -->
