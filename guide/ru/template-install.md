@@ -67,7 +67,7 @@ php yii_test migrate
 Выполнить иморт демо-данных в БД для разработки
 
 ```
-php yii fixtures
+php yii db/fixture
 ```
 
 Назначить домены
