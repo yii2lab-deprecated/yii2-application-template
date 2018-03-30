@@ -5,7 +5,7 @@
 
 use backend\assets\AppAsset;
 use yii2lab\helpers\Page;
-use yii2lab\notify\domain\widgets\Alert;
+use yii2lab\navigation\domain\widgets\Alert;
 
 AppAsset::register($this);
 ?>

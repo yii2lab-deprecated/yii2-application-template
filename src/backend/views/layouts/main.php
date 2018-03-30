@@ -7,7 +7,7 @@ use backend\assets\AppAsset;
 use yii2lab\navigation\domain\widgets\Breadcrumbs;
 use yii2lab\helpers\Page;
 use yii\helpers\Html;
-use yii2lab\notify\domain\widgets\Alert;
+use yii2lab\navigation\domain\widgets\Alert;
 
 $from = '@yii2lab/applicationTemplate/backend';
 
