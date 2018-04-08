@@ -6,7 +6,7 @@
 Создать проект из шаблона
 
 ```
-composer create-project --prefer-dist yii2lab/yii2-application-demo .
+composer create-project --prefer-dist yii2template/yii2-extended .
 ```
 
 Или клонировать уже существующий
