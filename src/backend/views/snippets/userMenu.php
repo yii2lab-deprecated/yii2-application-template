@@ -39,6 +39,7 @@ $identity = Yii::$app->user->identity;
 	        <?= Avatar::widget([
 		        'options' => [
 			        'class' => 'img-circle',
+			        'style' => 'height: 115px !important; width: 115px !important; ',
 		        ],
 	        ]) ?>
         <?php } ?>
