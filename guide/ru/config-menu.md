@@ -80,7 +80,7 @@ return [
 return [
 	'rightMenu' => [
 		[
-			'class' => 'yii2woop\account\module\helpers\Navigation',
+			'class' => 'yii2module\account\module\helpers\Navigation',
 		],
 	],
 ];
@@ -91,7 +91,7 @@ return [
 ```php
 return [
 	'rightMenu' => [
-		'yii2woop\account\module\helpers\Navigation',
+		'yii2module\account\module\helpers\Navigation',
 	],
 ];
 ```
