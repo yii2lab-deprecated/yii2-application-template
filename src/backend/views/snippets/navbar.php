@@ -2,6 +2,7 @@
 
 use yii\helpers\Url;
 use yii\helpers\Html;
+use yii2lab\app\domain\helpers\EnvService;
 use yii2lab\helpers\Page;
 
 $from = '@yii2lab/applicationTemplate/backend';
@@ -43,7 +44,7 @@ $from = '@yii2lab/applicationTemplate/backend';
 			
 			<!-- Control Sidebar Toggle Button -->
 			<li>
-				<?= Html::a('<i class="fa fa-external-link"></i>', env('url.frontend'), ['target' => '_blank', 'title' => Yii::t('main', 'go_to_frontend')]); ?>
+				<?= Html::a('<i class="fa fa-external-link"></i>', EnvService::getUrl(FRONTEND), ['target' => '_blank', 'title' => Yii::t('main', 'go_to_frontend')]); ?>
 			</li>
 		</ul>
 	</div>

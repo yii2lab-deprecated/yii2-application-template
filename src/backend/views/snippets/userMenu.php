@@ -1,5 +1,6 @@
 <?php
 
+use yii2lab\app\domain\helpers\EnvService;
 use yii2lab\domain\helpers\ServiceHelper;
 use yii2lab\helpers\ModuleHelper;
 use yii2lab\helpers\yii\Html;
@@ -53,7 +54,7 @@ $identity = Yii::$app->user->identity;
 
 		<div class="pull-left">
 			<?php if(ModuleHelper::has('profile', FRONTEND) && ServiceHelper::has('profile.avatar')) {
-				echo Html::a(Yii::t('profile/profile', 'title'),env('url.frontend') . 'profile/person',['class'=>"btn btn-default btn-flat"]);
+				echo Html::a(Yii::t('profile/profile', 'title'), EnvService::getUrl('frontend', 'profile/person'),['class'=>"btn btn-default btn-flat"]);
 			} ?>
 		</div>
 		<div class="pull-right">
