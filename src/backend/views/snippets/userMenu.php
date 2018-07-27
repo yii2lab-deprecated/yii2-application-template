@@ -54,7 +54,7 @@ $identity = Yii::$app->user->identity;
 
 		<div class="pull-left">
 			<?php if(ModuleHelper::has('profile', FRONTEND) && ServiceHelper::has('profile.avatar')) {
-				echo Html::a(Yii::t('profile/profile', 'title'), EnvService::getUrl('frontend', 'profile/person'),['class'=>"btn btn-default btn-flat"]);
+				echo Html::a(Yii::t('profile/profile', 'title'), EnvService::getUrl('frontend', 'profile'),['class'=>"btn btn-default btn-flat"]);
 			} ?>
 		</div>
 		<div class="pull-right">
