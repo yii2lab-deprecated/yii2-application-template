@@ -2,7 +2,7 @@
 
 namespace yii2lab\applicationTemplate\backend\helpers;
 
-use common\enums\rbac\PermissionEnum;
+use yii2lab\applicationTemplate\common\enums\ApplicationPermissionEnum;
 use yii2lab\extension\menu\interfaces\MenuInterface;
 
 class Menu implements MenuInterface {
@@ -20,7 +20,7 @@ class Menu implements MenuInterface {
 					//'icon' => '',
 					'url' => 'logreader',
 					'module' => 'logreader',
-					'access' => PermissionEnum::LOGREADER_MANAGE,
+					'access' => ApplicationPermissionEnum::LOGREADER_MANAGE,
 				],
 				'yii2lab\init\admin\helpers\Menu',
 			],
