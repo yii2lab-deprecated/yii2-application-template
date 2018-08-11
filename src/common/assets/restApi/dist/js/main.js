@@ -2,18 +2,24 @@
 (function($){
 	
 	var request = function (method, uri, data, successHandler) {
-		if(empty(uri)) {
-			return;
-		}
-		$.ajax({
-			method: method,
-			url: app.env.url.api+uri,
-			data: data,
-			dataType: 'json',
-			success: successHandler,
-		});
+        $.restRequest.request(method, app.env.url.api+uri, data, successHandler);
 	};
-	
+
+    $.restRequest = {
+        send: function (method, uri, data, successHandler) {
+            if(empty(uri)) {
+                return;
+            }
+            $.ajax({
+                method: method,
+                url: uri,
+                data: data,
+                dataType: 'json',
+                success: successHandler,
+            });
+        }
+    };
+
 	$.restApi = {
 		get: function (uri, data, successHandler) {
 			request('get', uri, data, successHandler);
