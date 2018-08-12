@@ -9,7 +9,6 @@ class RestApiAsset extends AssetBundle
 	public $sourcePath = '@yii2lab/applicationTemplate/common/assets/restApi/dist';
 	public $js = [
 		'js/main.js',
-        'js/account.js',
 	];
 	public $depends = [
 		'yii\web\JqueryAsset',
