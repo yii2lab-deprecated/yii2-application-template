@@ -4,7 +4,7 @@ namespace yii2lab\applicationTemplate\common\assets\main;
 
 use Yii;
 use yii\web\AssetBundle;
-use yii2lab\helpers\ApiVersionConfig;
+use yii2lab\rest\domain\helpers\ApiVersionConfig;
 
 class ScriptAsset extends AssetBundle
 {
