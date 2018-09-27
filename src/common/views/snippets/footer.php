@@ -1,6 +1,7 @@
 <?php
 
 use yii2lab\extension\menu\helpers\MenuHelper;
+use yii2lab\extension\widget\RequestRunTime;
 use yii2lab\helpers\ModuleHelper;
 use yii2lab\extension\web\enums\HtmlEnum;
 use yii2module\article\widgets\PostList;
@@ -39,7 +40,13 @@ $this->registerCss($css);
     &copy; <?= Yii::$app->name . SPC . date('Y') ?>
 
     &nbsp;
-
+    
+	<?php if(YII_ENV_DEV) { ?>
+		
+		<span class="text-muted"><?= RequestRunTime::widget() ?></span>
+	
+	<?php } ?>
+    
     <?php if(APP == FRONTEND && ModuleHelper::has('article')) { ?>
 
         <?= PostList::widget([
