@@ -22,6 +22,13 @@ return [
 	'title' => 'Название',
 	'description' => 'Описание',
 	
+	'sort' => 'Сортировка',
+	'hidden' => 'Скрыто',
+	'readonly' => 'Только для чтения',
+	'mask' => 'Маска',
+	'value' => 'Значение',
+	'button' => 'Кнопка',
+	
 	'list_title' => 'Список',
 	'create_title' => 'Создать',
 	'update_title' => 'Редактировать',
