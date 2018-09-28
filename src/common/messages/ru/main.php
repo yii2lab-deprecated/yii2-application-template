@@ -28,6 +28,7 @@ return [
 	'mask' => 'Маска',
 	'value' => 'Значение',
 	'button' => 'Кнопка',
+	'picture' => 'Картинка',
 	
 	'list_title' => 'Список',
 	'create_title' => 'Создать',
