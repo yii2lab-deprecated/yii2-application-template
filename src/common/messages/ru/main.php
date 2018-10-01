@@ -29,6 +29,7 @@ return [
 	'value' => 'Значение',
 	'button' => 'Кнопка',
 	'picture' => 'Картинка',
+	'blacklist' => 'Черный список',
 	
 	'list_title' => 'Список',
 	'create_title' => 'Создать',
