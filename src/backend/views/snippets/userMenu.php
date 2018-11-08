@@ -18,7 +18,7 @@ $identity = Yii::$app->user->identity;
 
     <?php if(ServiceHelper::has('profile.avatar')) { ?>
         <!-- The user image in the navbar-->
-	    <?= Avatar::widget([
+	    <?= !class_exists(Avatar::class) ? Html::fa('user') : Avatar::widget([
 		    'options' => [
 			    'class' => 'img-circle',
                 'height' => 18,
