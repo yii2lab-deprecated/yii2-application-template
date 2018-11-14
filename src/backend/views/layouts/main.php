@@ -5,7 +5,7 @@
 
 use backend\assets\AppAsset;
 use yii2lab\navigation\domain\widgets\Breadcrumbs;
-use yii2lab\helpers\Page;
+use yii2lab\extension\web\helpers\Page;
 use yii\helpers\Html;
 use yii2lab\navigation\domain\widgets\Alert;
 

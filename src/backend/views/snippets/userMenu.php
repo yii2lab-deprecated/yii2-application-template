@@ -2,7 +2,7 @@
 
 use yii2lab\app\domain\helpers\EnvService;
 use yii2lab\domain\helpers\ServiceHelper;
-use yii2lab\helpers\ModuleHelper;
+use yii2lab\extension\common\helpers\ModuleHelper;
 use yii2lab\extension\yii\helpers\Html;
 use yii2module\profile\widget\Avatar;
 

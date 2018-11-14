@@ -3,7 +3,7 @@
 use yii\helpers\Url;
 use yii\helpers\Html;
 use yii2lab\app\domain\helpers\EnvService;
-use yii2lab\helpers\Page;
+use yii2lab\extension\web\helpers\Page;
 
 $from = '@yii2lab/applicationTemplate/backend';
 
