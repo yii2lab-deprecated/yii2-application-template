@@ -25,7 +25,7 @@
 		"yiisoft/yii2-debug": "~2.0.0",
 		"yiisoft/yii2-gii": "~2.0.0",
 		"bower-asset/blockui": "^2.70",
-		"bower-asset/admin-lte": "~2.0",
+		"bower-asset/admin-lte": "2.3.11",
 		"bower-asset/font-awesome": "~4.0",
 		"php": ">=5.6.0"
 	}
