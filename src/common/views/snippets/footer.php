@@ -41,7 +41,7 @@ $this->registerCss($css);
 
     &nbsp;
     
-	<?php if(YII_ENV_DEV) { ?>
+	<?php if(YII_ENV_DEV || YII_ENV_PRETEST) { ?>
 		
 		<span class="text-muted"><?= RequestRunTime::widget() ?></span>
 	
